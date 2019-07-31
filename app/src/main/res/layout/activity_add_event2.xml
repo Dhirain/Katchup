@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/spinner_eventtype"
+                android:layout_width="281dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/event_type_entries"/>
+
+            <Spinner
+                android:id="@+id/spinner_premiumtype"
+                android:layout_width="281dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:entries="@array/event_preimum_type_entries"
+                android:prompt="@string/premium_type"
+                android:textColor="@color/primaryColor" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_cost"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/spinner_eventcategoery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:ems="10"
+                android:visibility="gone"
+                android:hint="Cost in Euros"
+                android:inputType="number"
+                android:textColor="@color/primaryColor"
+                android:textColorHint="@color/grey" />
+
+            <Spinner
+                android:id="@+id/spinner_eventcategoery"
+                android:layout_width="281dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/spinner_eventtype"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:entries="@array/event_category_entries"
+                android:prompt="@string/event_category"
+                android:textColor="@color/primaryColor" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_seats"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/spinner_eventcategoery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:ems="10"
+                android:hint="Number of seats"
+                android:inputType="number"
+                android:textColor="@color/primaryColor"
+                android:textColorHint="@color/grey" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_address"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/spinner_eventcategoery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:ems="10"
+                android:hint="Address"
+                android:textColor="@color/primaryColor"
+                android:textColorHint="@color/grey" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_pincode"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/et_address"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:hint="Pincode"
+                android:inputType="number"
+                android:textColor="@color/primaryColor"
+                android:textColorHint="@color/grey" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp">
+
+
+        <Button
+            android:id="@+id/button_post_event"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="Publish your event"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

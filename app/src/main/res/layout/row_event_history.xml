@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="1dp"
+        android:importantForAccessibility="no"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:importantForAccessibility="yes"
+            android:id="@+id/event_indicator"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/event_image"
+                android:text="name"
+                android:textColor="@color/primaryColor"
+                android:layout_marginEnd="10sp"
+                android:layout_toStartOf="@+id/like"
+                android:textSize="22sp"
+                android:maxLines="1"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/event_image"
+                android:layout_toLeftOf="@+id/like"
+                android:layout_marginRight="10sp" />
+
+            <TextView
+                android:id="@+id/event_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_name"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:layout_toEndOf="@+id/event_image"
+                android:layout_toStartOf="@+id/like"
+                android:text="address"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10sp"
+                android:layout_toLeftOf="@+id/like"
+                android:layout_toRightOf="@+id/event_image" />
+
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/like"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/approved"
+                android:clickable="false"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true" />
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dj.katchup">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".KatchUpApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.myTickets.MyTicketActivity"></activity>
+        <activity android:name=".ui.myEvent.MyEventActivity" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:label="Register"
+            android:theme="@style/AppTheme.OnlyActionbar" />
+        <activity
+            android:name=".ui.splashScreen.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="Login"
+            android:theme="@style/AppTheme.OnlyActionbar" />
+        <activity
+            android:name=".ui.landing.LandingActivity"
+            android:label="Home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.eventAdding.AddEventActivity1"
+            android:label="Add event" />
+        <activity
+            android:name=".ui.eventAdding.AddEventActivity2"
+            android:label="Add event" />
+        <activity
+            android:name=".ui.approval.ApprovalActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".ui.eventDetail.EventDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".ui.booking.BookingActivity" />
+    </application>
+
+</manifest>
